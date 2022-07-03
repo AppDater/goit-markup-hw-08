@@ -1,9 +1,17 @@
 .clients-list {
     display: flex;
+    flex-wrap: wrap;
 
     &__item {
-        width: 170px;
+        width: 210px;
         height: 92px;
+        margin-bottom: 30px;
+
+
+        @include mq(desktop){
+            width: 170px;
+            margin-bottom: 0;
+        }
     }
 
     &__link {
@@ -29,7 +37,18 @@
     }
 
     &__item:not(:last-child) {
+
+        @include mq(desktop){
         margin-right: 30px;
+        }
+    }
+
+    &__item:nth-child(2n+1){
+        margin-right: 30px;
+    }
+
+    &__item:nth-child(n+5){
+        margin-bottom: 0px;
     }
 }
 
@@ -39,9 +58,17 @@
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include mq(desktop){
+        margin-bottom: 50px;
+    }
 }
 
 .main-clients {
-    padding: 94px 15px;
+    padding: 60px 15px;
+
+    @include mq(desktop){
+        padding: 94px 15px;
+    }
 }

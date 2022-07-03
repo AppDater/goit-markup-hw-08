@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Студия</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
@@ -62,9 +62,14 @@
                     </a>
                 </li>
             </ul>
+            <button class="header-menu_btn">
+                <svg class="header-menu_icon">
+                    <use href="./pictures/sprite/sprite.svg#icon-menu-header"></use>
+                </svg>
+            </button>
         </div>
     </header>
-    <main>
+    <main class="main">
 
         <!--hero section-->
 
@@ -213,8 +218,53 @@
                 <h2 class="team-label">Наша команда</h2>
                 <ul class="team-list">
                     <li class="team-item">
-                        <img class="team-item__photo" src="./pictures/teammate-1.jpg" alt="Игорь Демьяненко фото"
-                            width="270" height="260">
+                        <picture>
+                            <source
+                            media="(min-width: 1200px)"
+                            srcset="
+                            ./pictures/teammate-1_sm@1x.jpg 1x,
+                            ./pictures/teammate-1_sm@2x.jpg 2x" 
+                            type="image/jpg">
+
+                            <source
+                            media="(min-width: 1200px)"
+                            srcset="
+                            ./pictures/teammate-1_sm@1x.webp 1x,
+                            ./pictures/teammate-1_sm@2x.webp 2x" 
+                            type="image/webp">
+
+                            <source
+                            media="(min-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-1_md@1x.jpg 1x,
+                            ./pictures/teammate-1_md@2x.jpg 2x" 
+                            type="image/jpg">
+
+                            <source
+                            media="(min-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-1_md@1x.webp 1x,
+                            ./pictures/teammate-1_md@2x.webp 2x" 
+                            type="image/webp">
+
+                            <source
+                            media="(max-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-1_bg@1x.jpg 1x,
+                            ./pictures/teammate-1_bg@2x.jpg 2x" 
+                            type="image/jpg">
+
+                            <source
+                            media="(max-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-1_bg@1x.webp 1x,
+                            ./pictures/teammate-1_bg@2x.webp 2x" 
+                            type="image/webp">
+
+                            <img class="team-item__photo" 
+                                src="./pictures/teammate-1.jpg" 
+                                alt="Игорь Демьяненко фото">
+                        </picture>
                         <div class="team-item__data">
                             <h3 class="team-item__name">Игорь Демьяненко</h3>
                             <p class="team-item__speciality">Product Designer</p>
@@ -247,8 +297,53 @@
                         </ul>
                     </li>
                     <li class="team-item">
-                        <img class="team-item__photo" src="./pictures/teammate-2.jpg" alt="Ольга Репина фото"
-                            width="270" height="260">
+                        <picture>
+                            <source
+                            media="(min-width: 1200px)"
+                            srcset="
+                            ./pictures/teammate-2_sm@1x.jpg 1x,
+                            ./pictures/teammate-2_sm@2x.jpg 2x" 
+                            type="image/jpg">
+
+                            <source
+                            media="(min-width: 1200px)"
+                            srcset="
+                            ./pictures/teammate-2_sm@1x.webp 1x,
+                            ./pictures/teammate-2_sm@2x.webp 2x" 
+                            type="image/webp">
+
+                            <source
+                            media="(min-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-2_md@1x.jpg 1x,
+                            ./pictures/teammate-2_md@2x.jpg 2x" 
+                            type="image/jpg">
+
+                            <source
+                            media="(min-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-2_md@1x.webp 1x,
+                            ./pictures/teammate-2_md@2x.webp 2x" 
+                            type="image/webp">
+
+                            <source
+                            media="(max-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-2_bg@1x.jpg 1x,
+                            ./pictures/teammate-2_bg@2x.jpg 2x" 
+                            type="image/jpg">
+
+                            <source
+                            media="(max-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-2_bg@1x.webp 1x,
+                            ./pictures/teammate-2_bg@2x.webp 2x" 
+                            type="image/webp">
+
+                            <img class="team-item__photo" 
+                                src="./pictures/teammate-2.jpg" 
+                                alt="Ольга Репина фото">
+                        </picture>
                         <div class="team-item__data">
                             <h3 class="team-item__name">Ольга Репина</h3>
                             <p class="team-item__speciality">Frontend Developer</p>
@@ -281,8 +376,53 @@
                         </ul>
                     </li>
                     <li class="team-item">
-                        <img class="team-item__photo" src="./pictures/teammate-3.jpg" alt="Николай Тарасов" width="270"
-                            height="260">
+                        <picture>
+                            <source
+                            media="(min-width: 1200px)"
+                            srcset="
+                            ./pictures/teammate-3_sm@1x.jpg 1x,
+                            ./pictures/teammate-3_sm@2x.jpg 2x" 
+                            type="image/jpg">
+
+                            <source
+                            media="(min-width: 1200px)"
+                            srcset="
+                            ./pictures/teammate-3_sm@1x.webp 1x,
+                            ./pictures/teammate-3_sm@2x.webp 2x" 
+                            type="image/webp">
+
+                            <source
+                            media="(min-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-3_md@1x.jpg 1x,
+                            ./pictures/teammate-3_md@2x.jpg 2x" 
+                            type="image/jpg">
+
+                            <source
+                            media="(min-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-3_md@1x.webp 1x,
+                            ./pictures/teammate-3_md@2x.webp 2x" 
+                            type="image/webp">
+
+                            <source
+                            media="(max-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-3_bg@1x.jpg 1x,
+                            ./pictures/teammate-3_bg@2x.jpg 2x" 
+                            type="image/jpg">
+
+                            <source
+                            media="(max-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-3_bg@1x.webp 1x,
+                            ./pictures/teammate-3_bg@2x.webp 2x" 
+                            type="image/webp">
+
+                            <img class="team-item__photo" 
+                                src="./pictures/teammate-3.jpg" 
+                                alt="Николай Тарасов фото">
+                        </picture>
                         <div class="team-item__data">
                             <h3 class="team-item__name">Николай Тарасов</h3>
                             <p class="team-item__speciality">Marketing</p>
@@ -315,8 +455,53 @@
                         </ul>
                     </li>
                     <li class="team-item">
-                        <img class="team-item__photo" src="./pictures/teammate-4.jpg" alt="Михаил Ермаков фото"
-                            width="270" height="260">
+                        <picture>
+                            <source
+                            media="(min-width: 1200px)"
+                            srcset="
+                            ./pictures/teammate-4_sm@1x.jpg 1x,
+                            ./pictures/teammate-4_sm@2x.jpg 2x" 
+                            type="image/jpg">
+
+                            <source
+                            media="(min-width: 1200px)"
+                            srcset="
+                            ./pictures/teammate-4_sm@1x.webp 1x,
+                            ./pictures/teammate-4_sm@2x.webp 2x" 
+                            type="image/webp">
+
+                            <source
+                            media="(min-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-4_md@1x.jpg 1x,
+                            ./pictures/teammate-4_md@2x.jpg 2x" 
+                            type="image/jpg">
+
+                            <source
+                            media="(min-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-4_md@1x.webp 1x,
+                            ./pictures/teammate-4_md@2x.webp 2x" 
+                            type="image/webp">
+
+                            <source
+                            media="(max-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-4_bg@1x.jpg 1x,
+                            ./pictures/teammate-4_bg@2x.jpg 2x" 
+                            type="image/jpg">
+
+                            <source
+                            media="(max-width: 768px)"
+                            srcset="
+                            ./pictures/teammate-4_bg@1x.webp 1x,
+                            ./pictures/teammate-4_bg@2x.webp 2x" 
+                            type="image/webp">
+
+                            <img class="team-item__photo" 
+                                src="./pictures/teammate-4.jpg" 
+                                alt="Михаил Ермаков фото">
+                        </picture>
                         <div class="team-item__data">
                             <h3 class="team-item__name">Михаил Ермаков</h3>
                             <p class="team-item__speciality">UI Designer</p>

@@ -1,18 +1,42 @@
 .about {
-    padding-top: 94px;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    @include mq (desktop){
+        padding-top: 94px;
+        margin-bottom: 0px;
+        display: block;
+        justify-content: start;
+    }
 
     &-list {
         display: flex;
         justify-content: space-between;
-        margin-top: 0;
-        margin-bottom: 0;
+        flex-direction: column;
         padding-top: 0;
         padding-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq(desktop){
+            width: auto;
+            flex-direction: row;
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
     
     &-list__item{
-    width: 270px;
-    height: 251px;
+    width: 450px;
+    height: 226px;
+
+    @include mq(desktop){
+        margin: 0;
+        width: 270px;
+        height: 251px;
+    }
     }
 
     &-list__icon_box {
@@ -28,9 +52,15 @@
         font-size: 14px;
         line-height: 0.8;
         letter-spacing: 0.03em;
+        text-align: center;
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 10px;
+
+        @include mq (tablet){
+            text-align: left;
+        }
+
     }
 
     &-list__description {

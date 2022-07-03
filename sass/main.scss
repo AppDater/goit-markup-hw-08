@@ -1,5 +1,6 @@
-@import './components/global';
+@import './utils/mixins';
 @import './utils/vars';
+@import './components/global';
 @import './components/body';
 @import'./components/logo';
 @import './components/header';
@@ -11,3 +12,4 @@
 @import './components/clients';
 @import './components/footer';
 @import './components/portfolio';
+@import './components/main';

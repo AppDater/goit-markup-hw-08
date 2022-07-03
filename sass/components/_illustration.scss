@@ -1,6 +1,13 @@
 .illustration {
     padding-top: 94px;
     padding-bottom: 94px;
+    visibility: hidden;
+    position: absolute;
+
+    @include mq(desktop){
+        visibility: visible;
+        position: unset;
+    }
 
     &-naming {
         font-weight: 700;

@@ -1,27 +1,79 @@
 .hero{
     background-color: $SubtextualColor;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-bsckground.png');
-    padding-top: 200px;
-    padding-bottom: 200px;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 
+    @include mq(mobile) {
+        width: 480px;    
+    }
+    
+    @include mq(tablet) {
+        width: 720px;
+    }
+    
+    @include mq(desktop) {
+        width: 1200px;
+    }
+    
     &-title{
         font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
-        width: 696px;
+        font-size: 24px;
+        line-height: 1.61;
+        width: 360px;
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: $BackColor;
-        margin: 0 auto;
+        margin: 0 60px;
         margin-bottom: 30px;
+
+        @include mq (desktop){
+            width: 696px;
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 1.36;
+        }
     }
 
     & .container {
+        width: 480px;
+        display: flex;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        padding-top: 118px;
+        padding-bottom: 118px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@1x.jpg');
+
+        
+        @include mq(retina){
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@2x.jpg');
+        }
+
+        @include mq(tablet){
+            width: 768px;
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-md@1x.jpg');
+    
+            @include mq(retina){
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-md@2x.jpg');
+            }
+        }
+
+        @include mq(desktop) {
+            width: 1200px;
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-lg@x1.jpg');
+            padding-top: 200px;
+            padding-bottom: 200px;
+    
+            @include mq(retina) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-lg@2x.jpg');
+            }
+        }
     }
 
     &-btn {
