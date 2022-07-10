@@ -73,9 +73,13 @@
     padding: 0;
     margin-right: auto;
 
-        @include mq(mobile-only) {
-            display: none;
-        }
+    @include mq(mobile-only) {
+        display: none;
+    }
+
+    @include mq(tablet-only) {
+        margin-right: 80px;
+    }
 
 }
 
@@ -86,9 +90,7 @@
     margin-top: 0;
     margin-bottom: 0;
 
-    @include mq(tablet){
-    margin-right: 84px;
-    }
+    
     @include mq(desktop){
         margin-right: 0;
     }
@@ -110,13 +112,13 @@
         position: absolute;
         content: '';
         background-color: $ActionColor;
-        bottom: -3px;
+        bottom: -1px;
         width: 100%;
         height: 4px;
         border-radius: 2px;
         z-index: -1;
 
-        @include mq(tablet){
+        @include mq(tablet-only){
             bottom: -12px;
         }
     }

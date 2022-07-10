@@ -57,6 +57,50 @@
                     </a>
                 </li>
             </ul>
+            <button class="header-menu_btn" data-menu-button>
+                <svg class="header-menu_icon">
+                    <use class="header-menu__icon_open" href="./pictures/sprite/sprite.svg#icon-menu-header"></use>
+                    <use class="header-menu__icon_close" href="./pictures/sprite/sprite.svg#icon-close_40px"></use>
+                </svg>
+            </button>
+            <div class="header-menu" data-menu>
+                <ul class="header-menu__list">
+                    <li class="header-menu__item">
+                        <a href="./index.html" class="header-menu__link">Студия</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="./portfolio.html" class="header-menu__link">Портфолио</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="" class="header-menu__link">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="header-menu__contacts">
+                    <li class="header-menu__contact_item">
+                        <a href="tel:+380961111111" class="header-menu__tel">+38 096 111 11 11</a>
+                    </li>
+                    <li class="header-menu__contact_item">
+                        <a href="mailto:info@devstudio.com" class="header-menu__mail">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="header-menu__socials">
+                    <li class="header-menu__social">
+                        <a href="" class="header-menu__social_link">Instagram</a>
+                        <div class="header-menu__vr"></div>
+                    </li>
+                    <li class="header-menu__social">
+                        <a href="" class="header-menu__social_link">Twitter</a>
+                        <div class="header-menu__vr"></div>
+                    </li>
+                    <li class="header-menu__social">
+                        <a href="" class="header-menu__social_link">Facebook</a>
+                        <div class="header-menu__vr"></div>
+                    </li>
+                    <li class="header-menu__social">
+                        <a href="" class="header-menu__social_link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <!-- projects sort buttons -->
@@ -86,7 +130,47 @@
         <ul class="studio_projects">
             <li class="studio_projects-item">
                 <a href="" class="studio_projects-link">
-                    <img class="studio_projects-photo" src="./pictures/laptop.jpg" alt="ноутбук із скріншотом сайту">
+                    <picture>
+                        <source 
+                        media="(min-width: 1200px)" 
+                        srcset="
+                        ./pictures/laptop__sm@1x.jpg 1x,
+                        ./pictures/laptop__sm@2x.jpg 2x" type="image/jpg">
+                        
+                        <source 
+                        media="(min-width: 1200px)" 
+                        srcset="
+                        ./pictures/laptop__sm@1x.webp 1x,
+                        ./pictures/laptop__sm@2x.webp 2x" type="image/webp">
+                        
+                        <source 
+                        media="(min-width: 768px)" 
+                        srcset="
+                        ./pictures/laptop__md@1x.jpg 1x,
+                        ./pictures/laptop__md@2x.jpg 2x" type="image/jpg">
+                        
+                        <source 
+                        media="(min-width: 768px)" 
+                        srcset="
+                        ./pictures/laptop__md@1x.webp 1x,
+                        ./pictures/laptop__md@2x.webp 2x" type="image/webp">
+                        
+                        <source 
+                        media="(max-width: 768px)" 
+                        srcset="
+                        ./pictures/laptop__bg@1x.jpg 1x,
+                        ./pictures/laptop__bg@2x.jpg 2x" type="image/jpg">
+                        
+                        <source 
+                        media="(max-width: 768px)" 
+                        srcset="
+                        ./pictures/laptop__bg@1x.webp 1x,
+                        ./pictures/laptop__bg@2x.webp 2x" type="image/webp">
+                        
+                        <img class="studio_projects-photo" 
+                            src="./pictures/laptop.jpg" 
+                            alt="ноутбук із скріншотом сайту">
+                    </picture>
                     <div class="studio_projects-data">
                         <h3 class="studio_projects-naming">Технокряк</h3>
                         <p class="studio_projects-direction">Веб-сайт</p>
@@ -99,7 +183,54 @@
             </li>
             <li class="studio_projects-item">
                 <a href="" class="studio_projects-link">
-                    <img class="studio_projects-photo" src="./pictures/basketball.jpg" alt="два гравця грають у баскетбол">
+
+                    <picture>
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/basketball__sm@1x.jpg 1x,
+                    ./pictures/basketball__sm@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/basketball__sm@1x.webp 1x,
+                    ./pictures/basketball__sm@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/basketball__md@1x.jpg 1x,
+                    ./pictures/basketball__md@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/basketball__md@1x.webp 1x,
+                    ./pictures/basketball__md@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/basketball__bg@1x.jpg 1x,
+                    ./pictures/basketball__bg@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/basketball__bg@1x.webp 1x,
+                    ./pictures/basketball__bg@2x.webp 2x" 
+                    type="image/webp">
+
+                    <img class="studio_projects-photo" 
+                        src="./pictures/basketball.jpg" 
+                        alt="два гравця грають у баскетбол">
+                    </picture>
                     <div class="studio_projects-data">
                         <h3 class="studio_projects-naming">Постер New Orlean vs Golden Star</h3>
                         <p class="studio_projects-direction">дизайн</p>
@@ -112,7 +243,54 @@
             </li>
             <li class="studio_projects-item">
                 <a href="" class="studio_projects-link">
-                    <img class="studio_projects-photo" src="./pictures/restorant_logo.jpg" alt="логотип ресторану seafood">
+
+                    <picture>
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/restorant_logo__sm@1x.jpg 1x,
+                    ./pictures/restorant_logo__sm@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/restorant_logo__sm@1x.webp 1x,
+                    ./pictures/restorant_logo__sm@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/restorant_logo__md@1x.jpg 1x,
+                    ./pictures/restorant_logo__md@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/restorant_logo__md@1x.webp 1x,
+                    ./pictures/restorant_logo__md@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/restorant_logo__bg@1x.jpg 1x,
+                    ./pictures/restorant_logo__bg@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/restorant_logo__bg@1x.webp 1x,
+                    ./pictures/restorant_logo__bg@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <img class="studio_projects-photo" 
+                        src="./pictures/restorant_logo.jpg" 
+                        alt="логотип ресторану seafood">
+                    </picture>
                     <div class="studio_projects-data">
                         <h3 class="studio_projects-naming">Ресторан Seafood</h3>
                         <p class="studio_projects-direction">Приложение</p>
@@ -125,7 +303,53 @@
             </li>
             <li class="studio_projects-item">
                 <a href="" class="studio_projects-link">
-                    <img class="studio_projects-photo" src="./pictures/headphones.jpg" alt="фото навушників">
+
+                    <picture>
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/headphones__sm@1x.jpg 1x,
+                    ./pictures/headphones__sm@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/headphones__sm@1x.webp 1x,
+                    ./pictures/headphones__sm@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/headphones__md@1x.jpg 1x,
+                    ./pictures/headphones__md@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/headphones__md@1x.webp 1x,
+                    ./pictures/headphones__md@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/headphones__bg@1x.jpg 1x,
+                    ./pictures/headphones__bg@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/headphones__bg@1x.webp 1x,
+                    ./pictures/headphones__bg@2x.webp 2x" 
+                    type="image/webp">
+                    <img class="studio_projects-photo" 
+                        src="./pictures/headphones.jpg" 
+                        alt="фото навушників">
+                    </picture>
                     <div class="studio_projects-data">
                         <h3 class="studio_projects-naming">Проект Prime</h3>
                         <p class="studio_projects-direction">Маркетинг</p>
@@ -138,7 +362,52 @@
             </li>
             <li class="studio_projects-item">
                 <a href="" class="studio_projects-link">
-                    <img class="studio_projects-photo" src="./pictures/boxes.jpg" alt="фото двох коробок">
+                    <picture>
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/boxes__sm@1x.jpg 1x,
+                    ./pictures/boxes__sm@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/boxes__sm@1x.webp 1x,
+                    ./pictures/boxes__sm@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/boxes__md@1x.jpg 1x,
+                    ./pictures/boxes__md@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/boxes__md@1x.webp 1x,
+                    ./pictures/boxes__md@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/boxes__bg@1x.jpg 1x,
+                    ./pictures/boxes__bg@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/boxes__bg@1x.webp 1x,
+                    ./pictures/boxes__bg@2x.webp 2x" 
+                    type="image/webp">
+                    <img class="studio_projects-photo" 
+                        src="./pictures/boxes.jpg" 
+                        alt="фото двох коробок">
+                    </picture>
                     <div class="studio_projects-data">
                         <h3 class="studio_projects-naming">Проект Boxes</h3>
                         <p class="studio_projects-direction">Приложение</p>
@@ -151,7 +420,52 @@
             </li>
             <li class="studio_projects-item">
                 <a href="" class="studio_projects-link">
-                    <img class="studio_projects-photo" src="./pictures/imac.jpg" alt="фото компютера">
+                    <picture>
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/imac__sm@1x.jpg 1x,
+                    ./pictures/imac__sm@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/imac__sm@1x.webp 1x,
+                    ./pictures/imac__sm@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/imac__md@1x.jpg 1x,
+                    ./pictures/imac__md@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/imac__md@1x.webp 1x,
+                    ./pictures/imac__md@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/imac__bg@1x.jpg 1x,
+                    ./pictures/imac__bg@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/imac__bg@1x.webp 1x,
+                    ./pictures/imac__bg@2x.webp 2x" 
+                    type="image/webp">
+                    <img class="studio_projects-photo" 
+                        src="./pictures/imac.jpg" 
+                        alt="фото компютера">
+                    </picture>
                     <div class="studio_projects-data">
                         <h3 class="studio_projects-naming">Inspiration is no Borders</h3>
                         <p class="studio_projects-direction">Веб-сайт</p>
@@ -164,7 +478,52 @@
             </li>
             <li class="studio_projects-item">
                 <a href="" class="studio_projects-link">
-                    <img class="studio_projects-photo" src="./pictures/book.jpg" alt="книга">
+                    <picture>
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/book__sm@1x.jpg 1x,
+                    ./pictures/book__sm@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/book__sm@1x.webp 1x,
+                    ./pictures/book__sm@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/book__md@1x.jpg 1x,
+                    ./pictures/book__md@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/book__md@1x.webp 1x,
+                    ./pictures/book__md@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/book__bg@1x.jpg 1x,
+                    ./pictures/book__bg@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/book__bg@1x.webp 1x,
+                    ./pictures/book__bg@2x.webp 2x" 
+                    type="image/webp">
+                    <img class="studio_projects-photo" 
+                        src="./pictures/book.jpg" 
+                        alt="книга">
+                    </picture>
                     <div class="studio_projects-data">
                         <h3 class="studio_projects-naming">Издание Limited Edition</h3>
                         <p class="studio_projects-direction">Дизайн</p>
@@ -177,7 +536,53 @@
             </li>
             <li class="studio_projects-item">
                 <a href="" class="studio_projects-link">
-                    <img class="studio_projects-photo" src="./pictures/birka.jpg" alt="ярлик">
+                    <picture>
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/birka__sm@1x.jpg 1x,
+                    ./pictures/birka__sm@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/birka__sm@1x.webp 1x,
+                    ./pictures/birka__sm@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/birka__md@1x.jpg 1x,
+                    ./pictures/birka__md@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/birka__md@1x.webp 1x,
+                    ./pictures/birka__md@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/birka__bg@1x.jpg 1x,
+                    ./pictures/birka__bg@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/birka__bg@1x.webp 1x,
+                    ./pictures/birka__bg@2x.webp 2x" 
+                    type="image/webp">
+
+                    <img class="studio_projects-photo" 
+                        src="./pictures/birka.jpg" 
+                        alt="ярлик">
+                    </picture>
                     <div class="studio_projects-data">
                         <h3 class="studio_projects-naming">Проект LAB</h3>
                         <p class="studio_projects-direction">Маркетинг</p>
@@ -190,7 +595,53 @@
             </li>
             <li class="studio_projects-item">
                 <a href="" class="studio_projects-link">
-                    <img class="studio_projects-photo" src="./pictures/printing.jpg" alt="руки на клавіатурі">
+                    <picture>
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/printing__sm@1x.jpg 1x,
+                    ./pictures/printing__sm@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 1200px)" 
+                    srcset="
+                    ./pictures/printing__sm@1x.webp 1x,
+                    ./pictures/printing__sm@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/printing__md@1x.jpg 1x,
+                    ./pictures/printing__md@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(min-width: 768px)" 
+                    srcset="
+                    ./pictures/printing__md@1x.webp 1x,
+                    ./pictures/printing__md@2x.webp 2x" 
+                    type="image/webp">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/printing__bg@1x.jpg 1x,
+                    ./pictures/printing__bg@2x.jpg 2x" 
+                    type="image/jpg">
+                    
+                    <source 
+                    media="(max-width: 768px)" 
+                    srcset="
+                    ./pictures/printing__bg@1x.webp 1x,
+                    ./pictures/printing__bg@2x.webp 2x" 
+                    type="image/webp">
+
+                    <img class="studio_projects-photo" 
+                    src="./pictures/printing.jpg" 
+                    alt="руки на клавіатурі">
+                    </picture>
                     <div class="studio_projects-data">
                         <h3 class="studio_projects-naming">Growing Business</h3>
                         <p class="studio_projects-direction">Приложение</p>
@@ -208,56 +659,64 @@
     <!-- footer section -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-inf">
-                <a class="studio-naming" href="">
-                    <span class="studio-naming__part">Web</span>
-                    <span class="studio-naming__second_part">Studio</span>
-                </a>
-                <address class="footer-contacts">
-                    <ul class="footer-contacts__list">
-                        <li class="footer-contacts__item">
-                            <a target="blank" class="footer-contacts__link" href="https://goo.gl/maps/rv8X6NTWvVzBSWie9">
-                                г. Киев, пр-т Леси Украинки, 26
-                            </a>
-                        </li>
-                        <li class="footer-contacts__item">
-                            <a class="footer-contacts__link" href="mailto:info@devstudio.com">
-                                info@devstudio.com
-                            </a>
-                        </li>
-                        <li class="footer-contacts__item">
-                            <a class="footer-contacts__link" href="tel:+380961111111">
-                                +38 096 111 11 11
-                            </a>
-                        </li>
-                    </ul>
-                </address>
-            </div>
-            <div class="footer-links">
-                <h3 class="footer-links__label">присоединяйтесь</h3>
-                <div class="footer-links__list">
-                    <a class="footer-links__link" href="">
-                        <svg class="footer-links__icon" width="20" height="20">
-                            <use href="./pictures/sprite/sprite.svg#icon-instagram-icon"></use>
-                        </svg>
+    
+            <div class="footer-content">
+                <div class="footer-inf">
+                    <a class="studio-naming" href="">
+                        <span class="studio-naming__part">Web</span>
+                        <span class="studio-naming__second_part">Studio</span>
                     </a>
-                    <a class="footer-links__link" href="">
-                        <svg class="footer-links__icon" width="20" height="20">
-                            <use href="./pictures/sprite/sprite.svg#icon-twitter-icon"></use>
-                        </svg>
-                    </a>
-                    <a class="footer-links__link" href="">
-                        <svg class="footer-links__icon" width="20" height="20">
-                            <use href="./pictures/sprite/sprite.svg#icon-facebook-icon"></use>
-                        </svg>
-                    </a>
-                    <a class="footer-links__link" href="">
-                        <svg class="footer-links__icon" width="20" height="20">
-                            <use href="./pictures/sprite/sprite.svg#icon-linkedin-icon"></use>
-                        </svg>
-                    </a>
+                    <address class="footer-contacts">
+                        <ul class="footer-contacts__list">
+                            <li class="footer-contacts__item">
+                                <a target="blank" class="footer-contacts__link"
+                                    href="https://goo.gl/maps/rv8X6NTWvVzBSWie9">
+                                    г. Киев, пр-т Леси Украинки, 26
+                                </a>
+                            </li>
+                            <li class="footer-contacts__item">
+                                <a class="footer-contacts__link" href="mailto:info@devstudio.com">
+                                    info@devstudio.com
+                                </a>
+                            </li>
+                            <li class="footer-contacts__item">
+                                <a class="footer-contacts__link" href="tel:+380961111111">
+                                    +38 096 111 11 11
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
                 </div>
+    
+    
+                <div class="footer-links">
+                    <h3 class="footer-links__label">присоединяйтесь</h3>
+                    <div class="footer-links__list">
+                        <a class="footer-links__link" href="">
+                            <svg class="footer-links__icon" width="20" height="20">
+                                <use href="./pictures/sprite/sprite.svg#icon-instagram-icon"></use>
+                            </svg>
+                        </a>
+                        <a class="footer-links__link" href="">
+                            <svg class="footer-links__icon" width="20" height="20">
+                                <use href="./pictures/sprite/sprite.svg#icon-twitter-icon"></use>
+                            </svg>
+                        </a>
+                        <a class="footer-links__link" href="">
+                            <svg class="footer-links__icon" width="20" height="20">
+                                <use href="./pictures/sprite/sprite.svg#icon-facebook-icon"></use>
+                            </svg>
+                        </a>
+                        <a class="footer-links__link" href="">
+                            <svg class="footer-links__icon" width="20" height="20">
+                                <use href="./pictures/sprite/sprite.svg#icon-linkedin-icon"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+    
             </div>
+    
             <form class="footer-form">
                 <p class="footer-form__label">Подпишитесь на рассылку</p>
                 <label class="footer-subs">
@@ -270,7 +729,9 @@
                     </svg>
                 </button>
             </form>
+    
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
 </body>
 </html>

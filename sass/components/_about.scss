@@ -20,6 +20,11 @@
         margin-left: auto;
         margin-right: auto;
 
+        @include mq(tablet){
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
         @include mq(desktop){
             width: auto;
             flex-direction: row;
@@ -32,11 +37,30 @@
     width: 450px;
     height: 226px;
 
-    @include mq(desktop){
-        margin: 0;
-        width: 270px;
-        height: 251px;
+        @include mq(tablet){
+            width: 354px;
+            height: 251px;
+        }
+
+        @include mq(desktop){
+            margin: 0;
+            width: 270px;
+            height: 251px;
+        }
     }
+
+    &-list__item:nth-child(2n+1){
+
+        @include mq(tablet){
+        margin-right: 30px;
+        }
+    }
+
+    &-list__item:nth-child(-n+2){
+        
+        @include mq(tablet){
+        margin-bottom: 30px;
+        }
     }
 
     &-list__icon_box {

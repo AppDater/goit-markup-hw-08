@@ -19,6 +19,11 @@
     &-inf {
         margin-left: auto;
         margin-right: auto;
+
+        @include mq(tablet){
+            margin-right: 165px;
+        }
+
         @include mq(desktop){
             margin-left: 0px;
             margin-right: 70px;
@@ -36,7 +41,7 @@
         padding: 0;
         margin-bottom: 60px;
 
-        @include mq(desktop){
+        @include mq(tablet){
             margin-bottom: 0;
         }
     }
@@ -67,9 +72,12 @@
         margin-right: auto;
         margin-bottom: 60px;
 
+        @include mq(tablet){
+            margin-bottom: 0;
+        }
+
         @include mq(desktop){
             margin-left: 0px;
-            margin-right: 93px;
             margin-bottom: 0;
         }
     }
@@ -110,6 +118,29 @@
         background-color: $ActionColor;
     }
 
+    &-content{
+
+        @include mq(mobile-only) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include mq(tablet){
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 60px;
+            padding-left: 60px;
+        }
+
+        @include mq(desktop){
+            align-items: baseline;
+            flex-direction: row;
+            margin-bottom: 0;
+            margin-right: 93px;
+            padding-left: 0;
+        }
+    }
+
     &-form {
         display: flex;
         text-align: center;
@@ -124,7 +155,7 @@
             margin-right: 0px;
             text-align: left;
             justify-content: start;
-            flex-direction: row;
+            flex-direction: column;
         }
     }
 
@@ -140,11 +171,6 @@
 
     &-subs {
         @extend %AllCenter;
-        margin-bottom: 20px;
-
-        @include mq(desktop){
-            margin-bottom: 20px;
-        }
     }
 
     &-subs__input {

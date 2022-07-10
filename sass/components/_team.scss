@@ -3,7 +3,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    @include mq(tablet){
+    @include mq(desktop){
         padding-top: 94px;
         padding-bottom: 94px;
     }
@@ -23,6 +23,11 @@
         text-align: center;
         letter-spacing: 0.03em;
         margin-bottom: 30px;
+
+        @include mq(tablet){
+            font-size: 28px;
+            line-height: 1.17;
+        }
 
         @include mq(desktop){
             margin-bottom: 50px;
@@ -51,10 +56,6 @@
 
         @include mq (tablet){
             width: 354px;
-
-            &:nth-child(n+2){
-                margin-right: 30px;
-            }
         }
 
         @include mq (desktop){
@@ -66,13 +67,25 @@
     &-item:not(:last-child) {
         margin-bottom: 30px;
 
-        @include mq (desktop){
+        @include mq (tablet){
             margin-bottom: 0;
         }
     }
 
     &-item:last-child {
         margin-right: 0;
+    }
+
+    &-item:nth-child(2n+1){
+        @include mq(tablet){
+            margin-right: 30px;
+        }
+    }
+
+    &-item:nth-child(-n+2){
+        @include mq(tablet-only){
+            margin-bottom: 30px;
+        }
     }
 
     &-item__data {

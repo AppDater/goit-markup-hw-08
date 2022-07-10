@@ -14,9 +14,9 @@
         line-height: 1.16;
     }
 
-    @include mq(tablet){
+    @include mq(tablet-only){
         margin: 26px 0px;
-        margin-right: 88px;
+        margin-right: 71px;
     }
 
     &__part {

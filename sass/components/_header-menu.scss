@@ -17,21 +17,8 @@
         padding-bottom: 48px;
         padding-left: 40px;
         background-color: #fff;
+        z-index: 4;
     }
-
-    // &__close{
-    //     position: absolute;
-    //     right: 15px;
-    //     top: 10px;
-    //     background-color: $BackColor;
-    //     border: 0px;
-    //     transition: color $MainTransition;
-    // }
-
-    // &__close:hover,
-    // &__close:focus{
-    //     color: $ActionColor;
-    // }
 
     &_icon{
         display: none;
@@ -54,7 +41,13 @@
         padding: 0;
         transition: color $MainTransition;
         z-index: 5;
-        
+
+        @include mq(tablet){
+            appearance: none;
+            visibility: hidden;
+            pointer-events: none;
+            position: absolute;
+        }
     }
 
     &__icon_close{
