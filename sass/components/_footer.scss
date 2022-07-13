@@ -2,12 +2,20 @@
     background-color: $SecondColor;
     padding: 60px 0;
 
+    @include mq(pre-mobile){
+        width: 100%;
+    }
+
     & .container {
         display: flex;
         flex-direction: column;
         align-items: baseline;
         text-align: center;
         justify-content: center;
+
+        @include mq(pre-mobile){
+            align-items: normal;
+        }
 
         @include mq(desktop){
             text-align: left;
@@ -21,11 +29,10 @@
         margin-right: auto;
 
         @include mq(tablet){
-            margin-right: 165px;
+            margin-left: 0;
         }
 
         @include mq(desktop){
-            margin-left: 0px;
             margin-right: 70px;
         }
     }
@@ -73,7 +80,7 @@
         margin-bottom: 60px;
 
         @include mq(tablet){
-            margin-bottom: 0;
+            margin: 0;
         }
 
         @include mq(desktop){
@@ -94,6 +101,9 @@
 
     &-links__list {
         display: flex;
+        @include mq (pre-mobile){
+            justify-content: center;
+        }
     }
 
     &-links__link {
@@ -125,14 +135,18 @@
             margin-right: auto;
         }
 
-        @include mq(tablet){
+        @include mq(tablet-only){
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
             margin-bottom: 60px;
             padding-left: 60px;
+            padding-right: 60px;
         }
 
         @include mq(desktop){
+            display: flex;
             align-items: baseline;
             flex-direction: row;
             margin-bottom: 0;
@@ -169,18 +183,36 @@
         color:$BackColor;
     }
 
+    &-form__area{
+        display: flex;
+        flex-direction: column;
+
+        @include mq(desktop){
+            flex-direction: row
+        }
+    }
+
     &-subs {
         @extend %AllCenter;
+
+        @include mq(not-desktop){
+            margin-bottom: 20px;
+        }
     }
 
     &-subs__input {
+        color: $BackColor;
         @extend %FlexCenter;
         background-color: inherit;
-        width: 450px;
+        width: 100%;
         height: 50px;
         padding-left: 16px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 4px;
+
+        @include mq(mobile){
+            width: 450px;
+        }
 
         @include mq(desktop){
             width: 358px;
@@ -212,8 +244,6 @@
         margin-right: auto;
 
         @include mq(desktop){
-            position: absolute;
-            transform: translateX(100%);
             margin-left: 0;
             margin-right: 0;
         }

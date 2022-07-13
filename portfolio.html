@@ -69,37 +69,39 @@
                         <a href="./index.html" class="header-menu__link">Студия</a>
                     </li>
                     <li class="header-menu__item">
-                        <a href="./portfolio.html" class="header-menu__link">Портфолио</a>
+                        <a href="./portfolio.html" class="header-menu__link link_current">Портфолио</a>
                     </li>
                     <li class="header-menu__item">
                         <a href="" class="header-menu__link">Контакты</a>
                     </li>
                 </ul>
-                <ul class="header-menu__contacts">
-                    <li class="header-menu__contact_item">
-                        <a href="tel:+380961111111" class="header-menu__tel">+38 096 111 11 11</a>
-                    </li>
-                    <li class="header-menu__contact_item">
-                        <a href="mailto:info@devstudio.com" class="header-menu__mail">info@devstudio.com</a>
-                    </li>
-                </ul>
-                <ul class="header-menu__socials">
-                    <li class="header-menu__social">
-                        <a href="" class="header-menu__social_link">Instagram</a>
-                        <div class="header-menu__vr"></div>
-                    </li>
-                    <li class="header-menu__social">
-                        <a href="" class="header-menu__social_link">Twitter</a>
-                        <div class="header-menu__vr"></div>
-                    </li>
-                    <li class="header-menu__social">
-                        <a href="" class="header-menu__social_link">Facebook</a>
-                        <div class="header-menu__vr"></div>
-                    </li>
-                    <li class="header-menu__social">
-                        <a href="" class="header-menu__social_link">LinkedIn</a>
-                    </li>
-                </ul>
+                <div class="header-menu__contact_inf">
+                    <ul class="header-menu__contacts">
+                        <li class="header-menu__contact_item">
+                            <a href="tel:+380961111111" class="header-menu__tel">+38 096 111 11 11</a>
+                        </li>
+                        <li class="header-menu__contact_item">
+                            <a href="mailto:info@devstudio.com" class="header-menu__mail">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="header-menu__socials">
+                        <li class="header-menu__social">
+                            <a href="" class="header-menu__social_link">Instagram</a>
+                            <div class="header-menu__vr"></div>
+                        </li>
+                        <li class="header-menu__social">
+                            <a href="" class="header-menu__social_link">Twitter</a>
+                            <div class="header-menu__vr"></div>
+                        </li>
+                        <li class="header-menu__social">
+                            <a href="" class="header-menu__social_link">Facebook</a>
+                            <div class="header-menu__vr"></div>
+                        </li>
+                        <li class="header-menu__social">
+                            <a href="" class="header-menu__social_link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -233,7 +235,7 @@
                     </picture>
                     <div class="studio_projects-data">
                         <h3 class="studio_projects-naming">Постер New Orlean vs Golden Star</h3>
-                        <p class="studio_projects-direction">дизайн</p>
+                        <p class="studio_projects-direction">Дизайн</p>
                     </div>
                     <div class="studio_projects-annotation">
                         <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
@@ -719,15 +721,17 @@
     
             <form class="footer-form">
                 <p class="footer-form__label">Подпишитесь на рассылку</p>
-                <label class="footer-subs">
-                    <input type="email" placeholder="E-mail" class="footer-subs__input">
-                </label>
-                <button type="submit" class="footer-btn">
-                    <span class="footer-btn__label">Подписаться</span>
-                    <svg width="24px" height="24px" class="footer-btn__icon">
-                        <use href="./pictures/sprite/sprite.svg#icon-icon-send"></use>
-                    </svg>
-                </button>
+                <div class="footer-form__area">
+                    <label class="footer-subs">
+                        <input type="email" placeholder="E-mail" class="footer-subs__input">
+                    </label>
+                    <button type="submit" class="footer-btn">
+                        <span class="footer-btn__label">Подписаться</span>
+                        <svg width="24px" height="24px" class="footer-btn__icon">
+                            <use href="./pictures/sprite/sprite.svg#icon-icon-send"></use>
+                        </svg>
+                    </button>
+                </div>
             </form>
     
         </div>

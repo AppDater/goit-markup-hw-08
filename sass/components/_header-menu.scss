@@ -3,6 +3,7 @@
     appearance: none;
     pointer-events: none;
     visibility: hidden;
+    transition: visibility, $MainTransition;
 
     &.is-open{
         pointer-events: all;
@@ -18,10 +19,16 @@
         padding-left: 40px;
         background-color: #fff;
         z-index: 4;
+        transition: visibility, $MainTransition;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &_icon{
+        @include mq(tablet){
         display: none;
+        }
 
         @include mq(mobile-only) {
             width: 40px;
@@ -50,6 +57,13 @@
         }
     }
 
+    &_btn.is-open{
+
+        position: fixed;
+        right: 15px;
+        top: 15px;
+    }
+
     &__icon_close{
         visibility: hidden;
     }
@@ -73,18 +87,28 @@
         margin-bottom: 32px;
     }
 
-    &__item:last-child{
-        margin-bottom: 306px;
+    &__link{
+        transition: color $MainTransition;
+        color: $MainColor;
     }
 
-    &__link{
-        color: $MainColor;
-        transition: color $MainTransition;
+    .link_current{
+        color: $AccentColor;
     }
 
     &__link:hover,
     &__link:focus {
         color: $ActionColor;
+    }
+
+    .header-menu__contact_inf{
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+    }
+
+    &__contact_item:first-child{
+        margin-bottom: 32px;
     }
 
     &__contact_item:last-child{
@@ -109,6 +133,7 @@
 
     &__socials{
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__social{

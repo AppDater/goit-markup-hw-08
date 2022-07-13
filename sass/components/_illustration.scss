@@ -1,8 +1,7 @@
 .illustration {
-    padding-top: 94px;
     padding-bottom: 94px;
     visibility: hidden;
-    position: absolute;
+    display: none;
 
     @include mq(desktop){
         visibility: visible;

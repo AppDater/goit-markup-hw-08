@@ -4,12 +4,15 @@
     display: flex;
     justify-content: center;
 
-    // @include mq(tablet){
-    //     justify-content: center;
-    // }
-
     &-container {
             @extend %FlexCenter;
+
+            @include mq(pre-mobile){
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+            }
 
             @include mq(mobile-only) {
                 justify-content: space-between;
@@ -41,14 +44,14 @@
     }
 
     &-menu_icon{
-        display: none;
+        width: 40px;
+        height: 40px;
+        display: block;
+        color: inherit;
+        fill: currentColor;
 
-        @include mq(mobile-only) {
-            width: 40px;
-            height: 40px;
-            display: block;
-            color: inherit;
-            fill: currentColor;
+        @include mq(tablet){
+        display: none;
         }
 
     }
@@ -72,6 +75,9 @@
 .navigation{
     padding: 0;
     margin-right: auto;
+    @include mq(pre-mobile){
+        display: none;
+    }
 
     @include mq(mobile-only) {
         display: none;
@@ -106,6 +112,11 @@
         padding-top: 25px;
         padding-bottom: 25px;
         transition: color, $MainTransition;
+
+        @include mq(desktop){
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
     }
 
     &__link::after {
@@ -120,6 +131,10 @@
 
         @include mq(tablet-only){
             bottom: -12px;
+        }
+
+        @include mq (desktop){
+            bottom: -4px;
         }
     }
     
@@ -149,14 +164,19 @@
     padding: 0;
     margin-top: 0;
     margin-bottom: 0;
+    display: none;
 
     @include mq(tablet){
         flex-direction: column;
+        display: block;
     }
 
     @include mq(desktop){
+        display: flex;
         flex-direction: row;
         align-items: baseline;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 
     &__item:not(:last-child){
@@ -201,11 +221,6 @@
     &__icon{
         fill: currentColor;
         margin-right: 8px;
-    }
-
-
-    @include mq(mobile-only) {
-        display: none;
     }
 
 }

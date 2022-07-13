@@ -6,29 +6,58 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-repeat: no-repeat;
+    width: auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@1x.jpg');
 
-    @include mq(mobile) {
-        width: 480px;    
-    }
+        @include mq(mobile){
+        width: 480px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@1x.jpg');
+        
+        
+            @include mq(retina) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@2x.jpg');
+            }
+        }
     
-    @include mq(tablet) {
-        width: 768px;
-    }
+        @include mq(tablet-only) {
+            width: 768px;
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-md@1x.jpg');
     
-    @include mq(desktop) {
-        width: 1200px;
-    }
+            @include mq(retina) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-md@2x.jpg');
+            }
+        }
+    
+        @include mq(desktop) {
+            width: 100%;
+            max-width: 1600px;
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-lg@x1.jpg');
+    
+            @include mq(retina) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-lg@2x.jpg');
+            }
+        }
+    
     
     &-title{
+        font-family: 'Roboto';
         font-weight: 900;
         font-size: 24px;
         line-height: 1.61;
-        width: 360px;
+        width: auto;
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: $BackColor;
-        margin: 0 60px;
         margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq(mobile){
+            margin: 0 60px;
+            width: 360px;
+            margin-bottom: 30px;
+        }
 
         @include mq (desktop){
             width: 696px;
@@ -39,41 +68,22 @@
     }
 
     & .container {
-        width: 480px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        padding-top: 118px;
-        padding-bottom: 118px;
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@1x.jpg');
+        padding-top: 100px;
+        padding-bottom: 100px;
 
-        
-        @include mq(retina){
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@2x.jpg');
-        }
-
-        @include mq(tablet){
-            width: 768px;
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-md@1x.jpg');
-    
-            @include mq(retina){
-                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-md@2x.jpg');
+            @include mq(mobile){
+                padding-top: 118px;
+                padding-bottom: 118px;
             }
-        }
 
-        @include mq(desktop) {
-            width: 1200px;
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-lg@x1.jpg');
-            padding-top: 200px;
-            padding-bottom: 200px;
-    
-            @include mq(retina) {
-                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-lg@2x.jpg');
+            @include mq(desktop){
+                padding-top: 200px;
+                padding-bottom: 200px;
             }
-        }
     }
 
     &-btn {

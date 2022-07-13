@@ -6,6 +6,7 @@
 
     @include mq (desktop){
         padding-top: 94px;
+        padding-bottom: 94px;
         margin-bottom: 0px;
         display: block;
         justify-content: start;
@@ -13,7 +14,6 @@
 
     &-list {
         display: flex;
-        justify-content: space-between;
         flex-direction: column;
         padding-top: 0;
         padding-bottom: 0;
@@ -34,8 +34,12 @@
     }
     
     &-list__item{
-    width: 450px;
-    height: 226px;
+        width: auto;
+
+        @include mq(mobile){
+        width: 450px;
+        height: 226px;
+        }
 
         @include mq(tablet){
             width: 354px;
@@ -51,15 +55,21 @@
 
     &-list__item:nth-child(2n+1){
 
-        @include mq(tablet){
+        @include mq(tablet-only){
         margin-right: 30px;
         }
     }
 
     &-list__item:nth-child(-n+2){
         
-        @include mq(tablet){
+        @include mq(tablet-only){
         margin-bottom: 30px;
+        }
+    }
+
+    &-list__item:not(:last-child){
+        @include mq(desktop){
+        margin-right: 30px;
         }
     }
 

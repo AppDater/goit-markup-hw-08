@@ -1,11 +1,29 @@
+.clients{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mq(desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+
 .clients-list {
     display: flex;
     flex-wrap: wrap;
-
     &__item {
-        width: 210px;
-        height: 92px;
         margin-bottom: 30px;
+        width: auto;
+
+        @media screen and (min-width: 353px) and (max-width: 479px){
+            margin-right: auto;
+        }
+
+        @include mq(mobile){
+            width: 210px;
+            height: 92px;
+        }
 
         @include mq(tablet){
             width: 226px;
@@ -55,6 +73,10 @@
     }
 
     &__item:nth-child(2n+1){
+        @include mq(pre-mobile){
+            margin-right: auto;
+        }
+        
         @include mq(mobile-only){
             margin-right: 30px;
         }
@@ -83,20 +105,12 @@
     letter-spacing: 0.03em;
     margin-bottom: 30px;
 
-    @include mq(tablet){
+    @include mq(tablet-only){
         font-size: 28px;
         line-height: 1.17;
     }
 
     @include mq(desktop){
         margin-bottom: 50px;
-    }
-}
-
-.main-clients {
-    padding: 60px 15px;
-
-    @include mq(desktop){
-        padding: 94px 15px;
     }
 }

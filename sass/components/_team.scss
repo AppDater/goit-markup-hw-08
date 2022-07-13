@@ -24,7 +24,7 @@
         letter-spacing: 0.03em;
         margin-bottom: 30px;
 
-        @include mq(tablet){
+        @include mq(tablet-only){
             font-size: 28px;
             line-height: 1.17;
         }
@@ -50,9 +50,11 @@
         background-color: $BackColor;
         box-shadow: $TeamSectionShadows;
         border-radius: 0px 0px 4px 4px;
-        padding-bottom: 30px;
-        width: 450px;
+        width: auto;
         
+        @include mq(mobile){
+            width: 450px;
+        }
 
         @include mq (tablet){
             width: 354px;
@@ -88,9 +90,13 @@
         }
     }
 
+    &-item__photo{
+        width: 100%;
+    }
+
     &-item__data {
         padding-top: 30px;
-        margin-bottom: 16px;
+        padding-bottom: 30px;
     }
 
     &-item__name {
@@ -107,6 +113,7 @@
         text-align: center;
         letter-spacing: 0.03em;
         color: $SubtextualColor;
+        margin-bottom: 16px;
     }
 
     &-item__icons {

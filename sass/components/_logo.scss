@@ -6,7 +6,7 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: inherit;
-    margin-right: 93px;
+    margin-right: auto;
 
     @include mq(mobile-only) {
         margin: 16px 0px;
@@ -17,6 +17,12 @@
     @include mq(tablet-only){
         margin: 26px 0px;
         margin-right: 71px;
+    }
+
+    @include mq(desktop){
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-right: 93px;
     }
 
     &__part {
