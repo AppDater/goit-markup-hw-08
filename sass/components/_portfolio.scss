@@ -71,7 +71,6 @@
         background: $BackColor;
         margin-bottom: 30px;
         transition: box-shadow $MainTransition;
-        flex-grow: 1;
 
         @include mq(desktop){
             margin-right: 30px;
@@ -114,6 +113,8 @@
         text-decoration: none;
         color: inherit;
         transition: box-shadow $MainTransition;
+        display: flex;
+        flex-direction: column;
     }
 
     &-link:hover &-annotation {
@@ -149,6 +150,10 @@
         line-height: 1.87;
         letter-spacing: 0.03em;
         color: #757575;
+    }
+
+    &__adaptive{
+        flex-grow: 1;
     }
 
     &-annotation {
