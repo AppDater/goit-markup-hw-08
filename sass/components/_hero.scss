@@ -8,34 +8,34 @@
     text-align: center;
     background-repeat: no-repeat;
     width: auto;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@1x.jpg');
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('./pictures/backgrounds/main-top-background-sm@1x.jpg');
 
         @include mq(mobile){
         width: 480px;
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@1x.jpg');
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('./pictures/backgrounds/main-top-background-sm@1x.jpg');
         
         
             @include mq(retina) {
-                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@2x.jpg');
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('./pictures/backgrounds/main-top-background-sm@2x.jpg');
             }
         }
     
         @include mq(tablet-only) {
             width: 768px;
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-md@1x.jpg');
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('./pictures/backgrounds/main-top-background-md@1x.jpg');
     
             @include mq(retina) {
-                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-md@2x.jpg');
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('./pictures/backgrounds/main-top-background-md@2x.jpg');
             }
         }
     
         @include mq(desktop) {
             width: 100%;
             max-width: 1600px;
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-lg@x1.jpg');
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('./pictures/backgrounds/main-top-background-lg@x1.jpg');
     
             @include mq(retina) {
-                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-lg@2x.jpg');
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('./pictures/backgrounds/main-top-background-lg@2x.jpg');
             }
         }
     
