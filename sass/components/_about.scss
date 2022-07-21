@@ -2,7 +2,7 @@
     padding-top: 60px;
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
 
     @include mq (desktop){
         padding-top: 94px;
@@ -68,8 +68,17 @@
     }
 
     &-list__item:not(:last-child){
+
+        @include mq(pre-mobile){
+            margin-bottom: 30px;
+        }
+
+        @include mq(mobile-only){
+            margin-bottom: 30px;
+        }
+
         @include mq(desktop){
-        margin-right: 30px;
+            margin-right: 30px;
         }
     }
 

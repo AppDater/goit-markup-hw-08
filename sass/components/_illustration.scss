@@ -6,6 +6,7 @@
     @include mq(desktop){
         visibility: visible;
         position: unset;
+        display: block;
     }
 
     &-naming {

@@ -9,7 +9,6 @@
     & .container {
         display: flex;
         flex-direction: column;
-        align-items: baseline;
         text-align: center;
         justify-content: center;
 
@@ -42,6 +41,7 @@
         margin-top: 0;
         margin-right: 0;
         margin-bottom: 20px;
+        padding: 0;
     }
 
     &-contacts__list {
@@ -77,7 +77,6 @@
     &-links {
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 60px;
 
         @include mq(tablet){
             margin: 0;
@@ -101,6 +100,7 @@
 
     &-links__list {
         display: flex;
+        justify-content: center;
         @include mq (pre-mobile){
             justify-content: center;
         }
@@ -129,18 +129,13 @@
     }
 
     &-content{
-
-        @include mq(mobile-only) {
-            margin-left: auto;
-            margin-right: auto;
-        }
+        margin-bottom: 60px;
 
         @include mq(tablet-only){
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
-            margin-bottom: 60px;
             padding-left: 60px;
             padding-right: 60px;
         }
@@ -150,7 +145,7 @@
             align-items: baseline;
             flex-direction: row;
             margin-bottom: 0;
-            margin-right: 93px;
+            margin-right: auto;
             padding-left: 0;
         }
     }
@@ -160,8 +155,6 @@
         text-align: center;
         justify-content: center;
         flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
 
         @include mq(desktop){
             position: relative;

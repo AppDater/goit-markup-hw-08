@@ -31,6 +31,11 @@
         border-radius: 4px;
         transition: transform, $MainTransition;
 
+        @include mq(pre-mobile){
+            width: 90%;
+            height: auto;
+        }
+
         @include mq (desktop){
             width: 528px;
             height: 581px;
@@ -230,6 +235,13 @@
         }
     }
 
+    &-modal_form__submit{
+        position: relative;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     &-submit_btn{
         width: 200px;
         height: 50px;
@@ -247,13 +259,8 @@
         letter-spacing: 0.06em;
         color: $BackColor;
         position: absolute;
-        bottom: 29px;
-        left: 180px;
-        transform: translateY(-100%);
-
-        @include mq(desktop){
-            bottom: 21px;
-            left: 220px;
-        }
+        bottom: 13px;
+        right: -39px;
+        transform: translateX(-100%);
     }
 }

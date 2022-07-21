@@ -41,13 +41,14 @@
 
     &_btn {
         width: 40px;
-        height: 40px;
+        height: 60px;
         color: $MainColor;
         background-color: #fff;
         border: 0px;
         padding: 0;
         transition: color $MainTransition;
         z-index: 5;
+        padding: 10px 0;
 
         @include mq(tablet){
             appearance: none;
