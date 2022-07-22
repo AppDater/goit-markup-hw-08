@@ -1733,6 +1733,9 @@ button {
   padding-bottom: 0;
   margin-top: 0;
   padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .studio_projects-item {
   overflow: visible;
@@ -1743,11 +1746,17 @@ button {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  width: calc(50% - 30px);
+  width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .studio_projects-item {
+    width: calc(50% - 30px);
+  }
 }
 @media screen and (min-width: 1200px) {
   .studio_projects-item {
     margin-right: 30px;
+    width: calc(33.3333333333% - 60px);
   }
 }
 .studio_projects-link:hover, .studio_projects-link:focus {
