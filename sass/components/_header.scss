@@ -141,7 +141,6 @@
     &__link:hover,
     &__link:focus{
         color: $ActionColor;
-        z-index: 1;
     }
     
     &__item:not(:last-child){
@@ -183,19 +182,11 @@
 
         @include mq(tablet-only){
             margin-right: 0;
-            margin-bottom: 10px;
-            padding-top: 20px;
         }
 
         @include mq(desktop){
             margin-bottom: 0;
             margin-right: 30px;
-        }
-    }
-
-    &__item:last-child{
-        @include mq(tablet-only){
-            padding-bottom:20px;
         }
     }
 
@@ -220,6 +211,20 @@
         @include mq(desktop){
             padding-top: 32px;
             padding-bottom: 32px;
+        }
+    }
+
+    &__link.mail {
+        @include mq(tablet-only) {
+            padding-bottom: 5px;
+            padding-top: 20px;
+        }
+    }
+
+    &__link.tel {
+        @include mq(tablet-only) {
+            padding-top: 5px;
+            padding-bottom: 20px;
         }
     }
 

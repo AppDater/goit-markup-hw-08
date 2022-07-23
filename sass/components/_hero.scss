@@ -8,21 +8,32 @@
     text-align: center;
     background-repeat: no-repeat;
     width: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@1x.jpg');
 
         @include mq(mobile){
         width: 480px;
+        padding-top: 118px;
+        padding-bottom: 118px;
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@1x.jpg');
+        background-size: 100%;
         
         
             @include mq(retina) {
                 background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-sm@2x.jpg');
             }
         }
+
+        @include mq(tablet){
+            padding-top: 118px;
+            padding-bottom: 118px;
+        }
     
         @include mq(tablet-only) {
             width: 768px;
             background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-md@1x.jpg');
+            background-size: 100%;
     
             @include mq(retina) {
                 background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-md@2x.jpg');
@@ -32,10 +43,13 @@
         @include mq(desktop) {
             width: 100%;
             max-width: 1600px;
+            padding-top: 200px;
+            padding-bottom: 200px;
             background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-lg@x1.jpg');
+            background-size:cover;
     
             @include mq(retina) {
-                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-lg@2x.jpg');
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../pictures/backgrounds/main-top-background-lg@x2.jpg');
             }
         }
     
@@ -72,17 +86,11 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-top: 100px;
-        padding-bottom: 100px;
 
             @include mq(mobile){
-                padding-top: 118px;
-                padding-bottom: 118px;
             }
 
             @include mq(desktop){
-                padding-top: 200px;
-                padding-bottom: 200px;
             }
     }
 
